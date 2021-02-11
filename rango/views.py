@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.shortcuts import render
 from django.http import HttpResponse
 from rango.models import Category
 from rango.models import Page
@@ -33,7 +32,6 @@ def show_category(request, category_name_slug):
         context_dict['pages'] = pages
         context_dict['category'] = category
     except Category.DoesNotExist:
-
 
         context_dict['category'] = None
         context_dict['pages'] = None

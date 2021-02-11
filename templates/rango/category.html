@@ -1,7 +1,7 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-{%block title_block %}
+{% block title_block %}
   {% if category %}
     {{ category.name }}
   {% else %}
@@ -18,7 +18,7 @@
     <li><a href="{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
   </ul>
-  {% endif %}
+  {% else %}
   <strong>No pages currently in category. </strong>
   {% endif %}
 
